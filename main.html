@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<style>
+* {
+  box-sizing: border-box;
+  font-family: 'inter';
+  background-color: #F1ECE9;
+
+}
+
+.left {
+  background-color: #F1ECE9;
+  padding: 20px;
+  float: left;
+  width: 20%; /* The width is 20%, by default */
+}
+
+.main {
+  background-color: #F1ECE9;
+  padding: 20px;
+  float: left;
+  width: 60%; /* The width is 60%, by default */
+}
+
+.right {
+  background-color: #F1ECE9;
+  padding: 20px;
+  float: left;
+  width: 20%; /* The width is 20%, by default */
+}
+.maintitle{
+    text-align: center;
+}
+.roundeddiv * {
+    background-color:#9C9F9E !important;
+    color: #323232;
+    border-radius: 25px;
+    
+}
+.roundeddiv {
+    background-color:#9C9F9E !important;
+    color: #323232;
+    border-radius: 25px;
+    box-shadow: 10px 10px;
+}
+.roundeddiv>:first-child {
+padding-top: 20px;
+padding-left: 50px;
+}
+.roundeddiv>form>* {
+    margin-left:50px;
+    margin-top:10px;
+}
+
+
+.roundeddiv>:last-child {
+padding-bottom: 40px;
+}
+
+input[type=text], select {
+  width: calc(100% - 100px);
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color:#F1ECE9 !important;
+
+}
+
+input[type=submit] {
+  width: calc(100% - 100px);
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+}
+.roundeddivtitle{
+      border-radius: 25px;
+
+}
+/* Use a media query to add a break point at 800px: */
+@media screen and (max-width: 800px) {
+   .main {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+  .left,.right{
+    display: none;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class='left'>
+  <p></p>
+</div>
+
+<div class='main'>
+    <h1 class='maintitle'>StokTake</h1>
+    <div class='roundeddiv'>
+       <h2 class='roundeddivtitle'>Stocks and Equites</h3>
+        <form action='/updateAPI' method='POST'>
+            <label for='APIURL'>Google Finance URL:</label><br>
+            <input type='text' name='APIURL'>
+            <input type='submit' value='Submit'>
+
+        </form>
+    </div>
+    
+</div>
+
+
+
+<div class='right'>
+  <p></p>
+</div>
+
+</body>
+</html>
+
